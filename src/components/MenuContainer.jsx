@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaGetPocket } from "react-icons/fa";
 import { categories } from "../utils/data";
 import { motion } from "framer-motion";
-// import RowContainer from "./RowContainer";
+import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
 
 const MenuContainer = () => {
@@ -57,10 +57,10 @@ const MenuContainer = () => {
         </div>
 
         <div className="w-full">
-          {/* <RowContainer
+          <RowContainer
             flag={false}
             data={foodItems?.filter((n) => n.category == filter)}
-          /> */}
+          />
         </div>
       </div>
     </section>

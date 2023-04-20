@@ -109,10 +109,10 @@ const loadScript = (src) =>{
   
           handler: function (response) {
             // alert(response.razorpay_payment_id);
-            toast.success("Payment is Successful Order Placed Sucessfully !! ",{
-              position: "top-center",
-              theme: "colored",
-            })
+            // toast.success("Payment is Successful Order Placed Sucessfully !! ",{
+            //   position: "top-center",
+            //   theme: "colored",
+            // })
           },
           prefill: {
             name: "Your Payment"

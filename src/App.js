@@ -5,6 +5,8 @@ import { CreateContainer, Header, MainContainer, OrderDetails } from "./componen
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
+import OrderHistory from "./components/OrderHistory";
+import ManageProd from "./components/ManageProd";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 
@@ -26,16 +28,16 @@ const App = () => {
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <div className="w-screen h-auto flex flex-col bg-primary">
+      <div className="w-screen h-auto flex flex-col bg-primary" style={{backgroundColor:'#EFEAE4'}}>
         <Header />
 
         <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
-            {/* <Route path="/orderdetails" element={<OrderDetails />} />
-            <Route path="/orderHistory" element={<OrderHistory />} /> */}
-            {/* <Route path="/ManageProd" element={<ManageProd />} /> */}
+            <Route path="/orderdetails" element={<OrderDetails />} />
+            <Route path="/orderHistory" element={<OrderHistory />} />
+            <Route path="/ManageProd" element={<ManageProd />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Services" element={<Services />} />
             
